@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train IVR Call Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚂 Train Enquiry IVR System</h1>
+            <p class="subtitle">Conversational IVR Modernization Framework</p>
+        </header>
+
+        <div class="ivr-interface">
+            <!-- Call Controls -->
+            <div class="call-controls">
+                <button id="startCall" class="btn btn-start">
+                    📞 Start Call
+                </button>
+                <button id="endCall" class="btn btn-end" disabled>
+                    📴 End Call
+                </button>
+                <button id="micButton" class="btn btn-mic" disabled>
+                    🎤 Speak
+                </button>
+                <span id="callTimer" class="timer">00:00</span>
+            </div>
+
+            <!-- Phone Display -->
+            <div class="phone-display">
+                <div id="phoneScreen" class="screen">
+                    <div class="status-indicator">
+                        <span id="callStatus">Ready</span>
+                        <span id="micStatus" class="mic-indicator"></span>
+                    </div>
+                    <div id="ivrOutput" class="output">
+                        <p class="welcome-text">Click "Start Call" to begin your train enquiry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keypad -->
+            <div class="keypad-container">
+                <div class="keypad">
+                    <button class="key" data-key="1">
+                        <span class="key-number">1</span>
+                    </button>
+                    <button class="key" data-key="2">
+                        <span class="key-number">2</span>
+                        <span class="key-letters">ABC</span>
+                    </button>
+                    <button class="key" data-key="3">
+                        <span class="key-number">3</span>
+                        <span class="key-letters">DEF</span>
+                    </button>
+                    <button class="key" data-key="4">
+                        <span class="key-number">4</span>
+                        <span class="key-letters">GHI</span>
+                    </button>
+                    <button class="key" data-key="5">
+                        <span class="key-number">5</span>
+                        <span class="key-letters">JKL</span>
+                    </button>
+                    <button class="key" data-key="6">
+                        <span class="key-number">6</span>
+                        <span class="key-letters">MNO</span>
+                    </button>
+                    <button class="key" data-key="7">
+                        <span class="key-number">7</span>
+                        <span class="key-letters">PQRS</span>
+                    </button>
+                    <button class="key" data-key="8">
+                        <span class="key-number">8</span>
+                        <span class="key-letters">TUV</span>
+                    </button>
+                    <button class="key" data-key="9">
+                        <span class="key-number">9</span>
+                        <span class="key-letters">WXYZ</span>
+                    </button>
+                    <button class="key" data-key="*">
+                        <span class="key-number">*</span>
+                    </button>
+                    <button class="key" data-key="0">
+                        <span class="key-number">0</span>
+                    </button>
+                    <button class="key" data-key="#">
+                        <span class="key-number">#</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Call History -->
+            <div class="history-container">
+                <h3>Call History</h3>
+                <div id="callHistory" class="history-list"></div>
+                <button id="clearHistory" class="btn btn-clear">Clear History</button>
+                <button id="downloadTranscript" class="btn btn-download" disabled>Download Transcript</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
